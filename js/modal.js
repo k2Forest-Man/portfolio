@@ -5,7 +5,7 @@ const closeButton = modal.querySelector('.modal__close')
 
 modalButton.forEach((buttons) => {
   buttons.addEventListener('click', () => {
-    modal.classList.remove('hidden')
+    modal.classList.toggle('hidden')
   })
 })
 

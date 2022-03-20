@@ -2,6 +2,7 @@ const tabButtons = document.querySelectorAll('.design-list__item')
 const tabDescriptions = document.querySelectorAll('.design__descr')
 const tabImages = document.querySelectorAll('.design-images')
 const titleDoc = document.querySelector('title')
+const imageApp = document.querySelectorAll('.design-block__img')
 
 const changeContent = (array, value) => {
   array.forEach((elem) => {
@@ -19,6 +20,10 @@ tabButtons.forEach((tabButton) => {
 
     changeContent(tabDescriptions, dataValue)
     changeContent(tabImages, dataValue)
+    changeContent(imageApp, dataValue)
+
+ 
+    // Добавляем подчеркивание активного таба
 
     tabButtons.forEach((btn) => {
       if (btn === event.target) {
@@ -27,7 +32,7 @@ tabButtons.forEach((tabButton) => {
         btn.classList.remove('design-list__item_active')
       }
     })
-    titleDoc.innerHTML = event.target.innerHTML; // Меняем Значение title на значение event.target
+    titleDoc.innerHTML = event.target.innerHTML; // Меняем Значение title на значение активного таба
   })
 })
   
