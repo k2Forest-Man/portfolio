@@ -1,10 +1,11 @@
 const links = document.querySelectorAll('.menu-list__link')
 const btn = document.querySelector('.main__button')
+const scrollBtn = document.querySelector('.main__scroll')
 
 
 // Создали новый массив состоящий из всех эл-тов массива links
 // и еще одного доп эл-та btn
-const allLinks = [...links, btn]
+const allLinks = [...links, btn, scrollBtn]
 
 allLinks.forEach(link => {
   link.addEventListener('click', (event) => {
